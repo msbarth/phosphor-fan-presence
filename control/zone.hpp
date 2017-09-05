@@ -190,7 +190,7 @@ class Zone
          *
          * @return - The current increase speed delta
          */
-        inline auto& getIncSpeedDelta() const
+        inline auto getIncSpeedDelta() const
         {
             return _incSpeedDelta;
         };
@@ -200,7 +200,7 @@ class Zone
          *
          * @return - The current decrease speed delta
          */
-        inline auto& getDecSpeedDelta() const
+        inline auto getDecSpeedDelta() const
         {
             return _decSpeedDelta;
         };
@@ -248,7 +248,7 @@ class Zone
          * @param[in] eventGroup - Group to process action on
          * @param[in] eventAction - Event action to run
          */
-        void timerExpired(Group eventGroup, Action eventAction);
+        void timerExpired(Group eventGroup, std::vector<Action> eventActions);
 
     private:
 
